@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Premium SaaS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- Left Side: Branding & Rive Animation -->
+        <div class="branding-section">
+            <div class="branding-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="#111111"/>
+                        <path d="M22 10L16 22L10 10H22Z" fill="#FAFAFA"/>
+                    </svg>
+                    <span>Lorem Ipsum</span>
+                </div>
+                <h1 class="hero-title">Lorem ipsum dolor sit amet.</h1>
+                <p class="subtitle">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
+                <!-- Spline 3D Animation -->
+                <div class="spline-container">
+                    <canvas id="canvas3d"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="form-section">
+            <!-- Active Registration Form -->
+            <div id="formContainer" class="form-container">
+                <div class="form-header">
+                    <h2>Create your account</h2>
+                </div>
+                
+                <form id="registrationForm" novalidate>
+                    <div class="input-group">
+                        <input type="text" id="fullName" name="fullName" placeholder=" " required>
+                        <label for="fullName">Full Name</label>
+                        <div class="focus-glow"></div>
+                        <span class="error-text" id="fullNameError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email Address</label>
+                        <div class="focus-glow"></div>
+                        <span class="error-text" id="emailError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" placeholder=" " required>
+                        <label for="password">Password</label>
+                        <div class="focus-glow"></div>
+                        <p class="helper-text">Min 8 chars, 1 uppercase, 1 lowercase, 1 number</p>
+                        <span class="error-text" id="passwordError"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder=" " required>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="focus-glow"></div>
+                        <span class="error-text" id="confirmPasswordError"></span>
+                    </div>
+
+                    <div id="formMessage" class="global-message hidden"></div>
+
+                    <button type="submit" id="registerBtn">
+                        <span class="btn-text">Continue</span>
+                        <div class="spinner hidden" id="btnSpinner"></div>
+                    </button>
+                </form>
+                
+                <p class="login-prompt">Already have an account? <a href="#">Sign in</a></p>
+            </div>
+
+            <!-- Success State -->
+            <div id="successContainer" class="success-container hidden">
+                <h2 class="success-title">Welcome aboard.</h2>
+                <p class="success-subtitle">Your account has been created successfully.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>

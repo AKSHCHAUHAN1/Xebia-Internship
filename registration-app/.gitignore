@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules/
+
+# SQLite database files
+users.db
+*.db
+*.sqlite
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS Files
+.DS_Store
